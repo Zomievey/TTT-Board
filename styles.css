@@ -1,0 +1,53 @@
+#board {
+  padding: 3em;
+  text-align: center;
+}
+
+.row > div {
+  float: left;
+  height: 100px; 
+  width: 100px; 
+  /* border: 1px solid black; */
+  cursor: pointer;
+}
+
+.row {
+  clear: both;
+  width: 302px; /* 100 * 3 + 2 * 1 */ 
+  margin: auto;
+}
+
+.top {
+  background-color: #ffcccc;
+  border-bottom: 1px solid black;
+}
+
+.bottom {
+  background-color: #ccffcc;
+  border-top: 1px solid black;
+}
+
+.left {
+  background-color: #ccccff;
+  border-right: 1px solid black;
+}
+
+.right {
+  background-color: #ffffcc;
+  border-left: 1px solid black;
+}
+
+p {
+  font-size: 1.5em;
+  text-align: center;
+  position: relative;
+  top: 0.5em;
+}
+
+#buttons {
+  margin: auto;
+  width: 300px;
+  text-align: center;
+  position: relative;
+  top: 1em;
+}
