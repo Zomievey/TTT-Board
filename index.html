@@ -2,41 +2,45 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <title>Tic Tac Toe</title>
 </head>
 
 <body>
     <div id="board">
-        <h1>Tic Tac Toe</h1>
-        <div class="row">
-            <div class="top left">
-                <p>X</p>
-            </div>
-            <div class="top center"></div>
-            <div class="top right"></div>
+        <div id="title">
+            <span class="tic">Tic</span>
+            <span class="tac">Tac</span>
+            <span class="toe">Toe</span>
         </div>
         <div class="row">
-            <div class="center left"></div>
-            <div class="center">
-                <p>X</p>
-            </div>
-            <div class="center right"></div>
+            <div class="top left cell"></div>
+            <div class="top middle cell"></div>
+            <div class="top right cell"></div>
         </div>
         <div class="row">
-            <div class="bottom left"></div>
-            <div class="bottom center"></div>
-            <div class="bottom right">
-                <p>X</p>
+            <div class="center left cell"></div>
+            <div id="heart" class="middle cell"></div>
+            <div class="center right cell"></div>
+        </div>
+        <div class="row">
+            <div class="bottom left cell"></div>
+            <div class="bottom middle cell"></div>
+            <div class="bottom right cell"></div>
+        </div>
+        <div>
+            <div class="row">
+                <button id="simple">Reset</button>
             </div>
         </div>
     </div>
-    <div id="buttons">
-        <button id="reset">Reset</button>
-        <button id="start">Start</button>
+
+    <script src="app.js"></script>
 </body>
 
 </html>
