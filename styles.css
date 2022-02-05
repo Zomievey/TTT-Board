@@ -76,7 +76,7 @@ body {
 }
 
 #heart {
-  background-image: url(22902026.jpg);
+  background-image: url(images/22902026.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -89,15 +89,14 @@ body {
 
 .tic {
  
- background-image: url(pink.png);
-  background-position: center;
+ background-image: url(images/pink.png);
   background-repeat: no-repeat;
-  background-size: 40px;
+  background-size: ;
 }
 
 .tac {
   
-  background-image: url(purple-removebg-preview.png);
+  background-image: url(images/purple-removebg-preview.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 40px;
@@ -105,7 +104,7 @@ body {
 
 .toe {
   
-  background-image: url(blue-removebg-preview.png);
+  background-image: url(images/blue-removebg-preview.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 40px;
