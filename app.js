@@ -1,6 +1,7 @@
 let cells = document.querySelectorAll(".cell");
 let resetButton = document.getElementById("simple");
 let turnCounter = 0;
+let winnerAlert = document.getElementById("winner");
 let wins = [
   [cells[0], cells[1], cells[2]],
   [cells[3], cells[4], cells[5]],
@@ -51,24 +52,24 @@ function checkWin() {
 
     if (xCount == 3) {
       setTimeout(function () {
-        alert("X wins!");
+        winnerAlert.textContent = "X Wins!";
       }, 100);
 
-      resetButton.style.display = "inline";
-      return;
+      // resetButton.style.display = "inline";
+    
     } else if (oCount == 3) {
       setTimeout(function () {
-        alert("O wins!");
+      winnerAlert.textContent = "O wins!";
       }, 100);
-      resetButton.style.display = "inline";
-      return;
+      // resetButton.style.display = "inline";
+      
     }
   }
 
   if (turnCounter == 9) {
     setTimeout(function () {
-      alert("Draw!");
+      winnerAlert.textContent = "Draw!";
     }, 100);
-    resetButton.style.display = "inline";
+    // resetButton.style.display = "inline";
   }
 }
