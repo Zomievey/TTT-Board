@@ -2,6 +2,9 @@ let cells = document.querySelectorAll(".cell");
 let resetButton = document.getElementById("simple");
 let turnCounter = 0;
 let winnerAlert = document.getElementById("winner");
+let gameOver = turnCounter == 10;
+
+
 let wins = [
   [cells[0], cells[1], cells[2]],
   [cells[3], cells[4], cells[5]],
@@ -26,12 +29,16 @@ function cellClicked(e) {
     e.target.textContent = "X";
   } else {
     e.target.textContent = "O";
+  } if (e.target.textContent == "X" || e.target.textContent == "O") {
+    e.target.removeEventListener("click", cellClicked);
   }
 
   turnCounter++;
-
   checkWin();
+  checkDraw();
+  endGame();
 }
+
 
 function checkWin() {
   for (let i = 0; i < wins.length; i++) {
@@ -54,22 +61,36 @@ function checkWin() {
       setTimeout(function () {
         winnerAlert.textContent = "X Wins!";
       }, 100);
+      e.target.removeEventListener("click", cellClicked);
+      // event.target.textContent = null;
+      return;
 
       // resetButton.style.display = "inline";
-    
     } else if (oCount == 3) {
       setTimeout(function () {
-      winnerAlert.textContent = "O wins!";
+        winnerAlert.textContent = "O wins!";
       }, 100);
+      e.target.removeEventListener("click", cellClicked);
+      // event.target.textContent =  null;
+      return;
       // resetButton.style.display = "inline";
-      
     }
   }
+}
 
+function checkDraw() {
   if (turnCounter == 9) {
     setTimeout(function () {
       winnerAlert.textContent = "Draw!";
     }, 100);
-    // resetButton.style.display = "inline";
+    // event.target.textContent = " ";
+   return;
   }
 }
+
+function endGame() {
+  if (turnCounter == 10) {
+    window.location.reload();
+  }
+  }
+
