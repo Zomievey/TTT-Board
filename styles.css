@@ -53,6 +53,7 @@ body {
 }
 
 #simple {
+  color: black;
   font-family: 'Parisienne', cursive;
   margin-top: 1em;
   font-size: 30px;
@@ -67,6 +68,7 @@ body {
 }
 
 #simple::after {
+  color: black;
   font-family: 'Parisienne', cursive;
   content: "";
   background-color: #dcbaff;
